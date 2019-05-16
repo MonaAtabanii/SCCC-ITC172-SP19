@@ -9,7 +9,7 @@ class Meeting(models.Model):
     meetinglocation=models.TextField(null=True, blank=True)
     meetingagenda=models.TextField(null=True, blank=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.meetingtitle
     
     class Meta:
@@ -23,7 +23,7 @@ class MeetingMinutes(models.Model):
     attendance=models.ManyToManyField(User)  
     minutestext=models.TextField(null=True, blank=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.minutestext
 
     class Meta:
@@ -39,7 +39,7 @@ class Resource(models.Model):
     userid=models.ForeignKey(User, on_delete=models.DO_NOTHING)
     resourcedescription=models.TextField(null=True, blank=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.resourcename
     
     class Meta:
@@ -56,7 +56,7 @@ class Event(models.Model):
     eventdescription=models.TextField(null=True, blank=True)
     userid=models.ForeignKey(User, on_delete=models.DO_NOTHING)
 
-    def _str_(self):
+    def __str__(self):
         return self.eventtitle
     
     class Meta:
