@@ -7,4 +7,6 @@ urlpatterns = [
     path('getResources/', views.getResources, name='resources'),
     path('getMeetings/', views.getMeetings, name='meetings'),
     path('getMeetingsDetail/<int:id>',views.getMeetingsDetail, name='detail'),
+    path('newResource/', views.newResource, name='newresource'),
+    path('newMeeting/', views.newMeeting, name='newmeeting'),
 ]

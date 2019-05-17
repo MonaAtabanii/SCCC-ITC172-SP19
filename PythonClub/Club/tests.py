@@ -9,6 +9,7 @@ class EventTest(TestCase):
         event=Event(eventtitle='Have Fun')
         self.assertEqual(str(event), event.eventtitle)
 
+
     def test_eventtablename(self):
         self.assertCountEqual(str(Event._meta.db_table), 'event')
 
