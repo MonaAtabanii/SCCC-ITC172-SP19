@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Event, MeetingMinutes, Meeting, Resource
 from .forms import ResourceForm, MeetingForm
 from django.contrib.auth.decorators import login_required
-
+from django.urls import reverse_lazy
 
 # Create your views here.
 def index(request):
