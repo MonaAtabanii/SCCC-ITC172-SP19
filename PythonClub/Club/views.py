@@ -19,14 +19,8 @@ def getMeetings(request):
 
 def getMeetingsDetail(request, id):
     meetdetail_list=get_object_or_404(Meeting, pk=id)
-    #prod=Product.objects.get_object_or_404(Product, pk=id)
-    #meetdetail_list=get_object_or_404(Meeting, pk=id)
-    #reviewcount=Review.objects.filter(meeting=id).count()
-    #reviews=Review.objects.filter(meeting=id)
     context={
          'meetdetail_list' : meetdetail_list,
-         #'reviewcount' : reviewcount,
-         #'reviews': reviews,
     }
     return render (request, 'Club/meetingsdetails.html', context=context)
 
